@@ -82,7 +82,7 @@ class App extends React.Component {
         <td style={{color: "black",border: "1px solid black"}}> {emotionDetail[1]} </td>
         </tr>
       })
-      this.setState({sentimentOutput:<table width="100%" style={{border: "1px solid black"}}><tbody>{emotionDetails}</tbody></table> });
+      this.setState({sentimentOutput:<table style={{width:"50%", marginTop:"20px", marginLeft:"auto", marginRight:"auto", border: "1px solid black"}}><tbody>{emotionDetails}</tbody></table> });
 
   });
   }
@@ -94,13 +94,13 @@ class App extends React.Component {
   render() {
     return (  
       <div className="App">
-      <button className="btn btn-info" onClick={this.renderTextArea}>Text</button>
-        <button className="btn btn-dark"  onClick={this.renderTextBox}>URL</button>
+      <button className="btn btn-info m-2" onClick={this.renderTextArea}>Text</button>
+        <button className="btn btn-dark m-2"  onClick={this.renderTextBox}>URL</button>
         <br/><br/>
         {this.state.innercomp}
         <br/>
-        <button className="btn-primary" onClick={this.sendForSentimentAnalysis}>Analyze Sentiment</button>
-        <button className="btn-primary" onClick={this.sendForEmotionAnalysis}>Analyze Emotion</button>
+        <button className="btn-primary m-2" onClick={this.sendForSentimentAnalysis}>Analyze Sentiment</button>
+        <button className="btn-primary m-2" onClick={this.sendForEmotionAnalysis}>Analyze Emotion</button>
         <br/>
             {this.state.sentimentOutput}
       </div>
